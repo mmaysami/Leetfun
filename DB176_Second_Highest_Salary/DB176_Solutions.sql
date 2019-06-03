@@ -9,8 +9,11 @@ https://leetcode.com/problems/second-highest-salary/
 -- order by Salary Asc
 
 
--- Solution B
-select max(Salary) as SecondHighestSalary from Employee 
-where Salary < (select Max(Salary) from Employee);
+-- Solution B (Slower)
+-- select max(Salary) as SecondHighestSalary from Employee 
+-- where Salary < (select Max(Salary) from Employee);
 
 
+-- Solution C (Faster)
+select max(salary) as SecondHighestSalary from Employee 
+where Salary not in (select max(Salary) from Employee);
