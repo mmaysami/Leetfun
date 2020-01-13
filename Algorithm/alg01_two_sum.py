@@ -9,10 +9,12 @@
 #   Because nums[0] + nums[1] = 2 + 7 = 9,
 #   return [0, 1]
 
+import typing
+
+
 class Solution:
     def twoSum(self, nums, target):
-        # Hash (Faster than Brute-Force,
-        #                       but not Memory Efficient)
+        # Hash (Faster than Brute-Force, but not Memory Efficient)
         hseen = dict()
         for i, num in enumerate(nums):
             if target - num not in hseen.keys():
@@ -20,9 +22,10 @@ class Solution:
             else:
                 return [hseen[target - num], i]
 
-#===============================================================================
-#===============================================================================
-#===============================================================================
+
+# ===============================================================================
+# ===============================================================================
+# ===============================================================================
 if __name__ == "__main__":
     sol = Solution()
-    print (sol.twoSum([2, 7, 11, 15],9))
+    print(sol.twoSum([2, 7, 11, 15], 9))

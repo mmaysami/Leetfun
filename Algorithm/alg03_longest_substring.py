@@ -14,62 +14,67 @@
 #   Output: 1
 #   Explanation: The answer is "b", with the length of 1.
 
+import typing
+
+
 class Solution:
 
-    #---------------------------------------------------------------
+    # ---------------------------------------------------------------
     #       Main Solution
-    #---------------------------------------------------------------
+    # ---------------------------------------------------------------
     def lengthOfLongestSubstring(self, s: str) -> int:
-        #s = s.lower()  # CASE SENSITIVE
+        # s = s.lower()  # CASE SENSITIVE
         length = len(s)
 
-        #Empty or Single Char String
-        if length<=1:
+        # Empty or Single Char String
+        if length <= 1:
             return length
 
-        maxsub=0
+        maxsub = 0
         # Longer Strings
         for i in range(length):
             charset = set()
-            j       = i
+            j = i
             while (s[j] not in charset):
                 charset.add(s[j])
-                if j+1<length : j += 1
+                if j + 1 < length: j += 1
 
             if len(charset) > maxsub:
                 maxsub = len(charset)
 
         return maxsub
-    #---------------------------------------------------------------
+
+    # ---------------------------------------------------------------
     #       Alternate Long Solution
-    #---------------------------------------------------------------
+    # ---------------------------------------------------------------
     def lengthOfLongestSubstring_alt(self, s: str) -> int:
-        #s = s.lower()  # CASE SENSITIVE
+        # s = s.lower()  # CASE SENSITIVE
         length = len(s)
-        #Empty or Single Char String
-        if length<=1:
+        # Empty or Single Char String
+        if length <= 1:
             return length
 
         # Longer Strings
         lensubs = [0]
         for b in range(length):
-            if (l-b) < max(lsubs):
+            if (length - b) < max(lensubs):
                 break
 
             chars = []
-            for i in range(b,length):
+            for i in range(b, length):
                 if s[i] not in chars:
                     chars.append(s[i])
                 else:
-                    #print(b," : ", chars)
+                    # print(b," : ", chars)
                     break
             lensubs.append(len(chars))
 
-        return max(lsubs)
+        return max(lensubs)
 
-#===============================================================================
-#===============================================================================
-#===============================================================================
+
+# ===============================================================================
+# ===============================================================================
+# ===============================================================================
 if __name__ == "__main__":
     sol = Solution()
     print(sol.lengthOfLongestSubstring("abcabcbb"))
