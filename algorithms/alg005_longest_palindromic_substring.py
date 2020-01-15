@@ -67,7 +67,7 @@ class Solution:
         return maxsub
 
     # -----------------------------------------------------------------
-    #   Dynamic Algorithm (Faster)
+    #   Dynamic algorithms (Faster)
     # -----------------------------------------------------------------
     def longestPalindrome(self, s):
 
