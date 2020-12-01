@@ -7,13 +7,12 @@
 #   Output: 7 -> 0 -> 8
 #   Explanation: 342 + 465 = 807
 
-# Definition for singly-linked list.
-# class ListNode:
-#     def __init__(self, x):
-#         self.val = x
-#         self.next = None
 
-import typing
+# Definition for singly-linked list.
+class ListNode:
+    def __init__(self, x):
+        self.val = x
+        self.next = None
 
 
 class Solution:
@@ -22,8 +21,8 @@ class Solution:
     #       Main Solution
     # ---------------------------------------------------------------
     def addTwoNumbers(self, l1: ListNode, l2: ListNode) -> ListNode:
-        co = 0      # Carry Over
-        rl = []     # List of Results
+        co = 0  # Carry Over
+        rl = []  # List of Results
 
         while (l1 != None) or (l2 != None) or (co != 0):
             if (l1 is None):
@@ -35,13 +34,13 @@ class Solution:
 
             ss = (l1.val + l2.val + co) % 10
             co = (l1.val + l2.val + co) // 10
-            rn = ListNode(ss)       # Result ListNode
-            rl.append(rn)           # List of Results
+            rn = ListNode(ss)  # Result ListNode
+            rl.append(rn)  # List of Results
 
             l1 = l1.next
             l2 = l2.next
 
-        rl = rl[-1::-1]         # Reverse Order of List of Results
+        rl = rl[::-1]  # Reverse Order of List of Results
         # print([e.val for e in rl])
 
         if len(rl) > 1:
