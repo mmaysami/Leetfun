@@ -25,3 +25,7 @@ Fun with coding Problems
 | 054       | [Spiral Matrix](https://leetcode.com/problems/spiral-matrix)                                                                  | [✓](algorithms/alg054_spiral_matrix.py)                   |
 | 075       | [Sort Colors](https://leetcode.com/problems/sort-colors)                                                                      | [✓](algorithms/alg075_sort_colors.py)                     |
 | 088       | [Merge Sorted Array](https://leetcode.com/problems/merge-sorted-array)                                                        | [✓](algorithms/alg088_merge_sorted_array.py)              |
+| 445       | [Add Two Numbers II](https://leetcode.com/problems/add-two-numbers-ii/)                                                       | [✓](algorithms/alg445_add_num_II.py)                     |
+| 804       | [Unique Morse Code Words](https://leetcode.com/problems/unique-morse-code-words/)                                             | [✓](algorithms/alg804_morse_words.py)                     |
+| 937       | [Reorder Data in Log Files](https://leetcode.com/problems/reorder-data-in-log-files/)                                         | [✓](algorithms/alg937_reorder_logs.py)                    |
+| 957       | [Prison Cells After N Days](https://leetcode.com/problems/prison-cells-after-n-days)                                          | [✓](algorithms/alg957_prison_cell.py)                     |
