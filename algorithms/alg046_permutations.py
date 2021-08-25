@@ -40,7 +40,6 @@ class Solution:
             pre = []
             for i in range(length):
                 sub_perm += self.permute(nums[1:i]+nums[i+1::])
-                # pre += factorial(length - 1) * [ [ nums[i] ] ]
 
             # print("Nums: ", nums)
             # print("Len: %s,  Factorial: %s" %(length, factorial(length)))

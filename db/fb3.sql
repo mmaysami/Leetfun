@@ -8,3 +8,8 @@ SQL questions - A table schema with tables like employee , department, employee_
     5) Table has two data entries every day for # of apples and oranges sold. write a query to get
         the difference between the apples and oranges sold on a given day
  */
+
+
+select te1.employee from projects te1
+where te1.department in
+      (select max(te2.* projects te

@@ -32,11 +32,13 @@ class Solution:
     #       Main Solution
     # ---------------------------------------------------------------
     def sortElement(self, nums, ind, i):
+        # Swap 2s to Right
         if nums[i] == 2:
             nums[i] = nums[ind[2]]
             nums[ind[2]] = 2
             ind[2] += 1
 
+        # Swap 1s to Middle
         elif nums[i] == 1:
             nums[i] = nums[ind[1]]
             nums[ind[1]] = 1
@@ -44,6 +46,7 @@ class Solution:
             ind[1] += 1
             ind[2] += 1
 
+        # Swap 0s to Left
         elif nums[i] == 0:
             nums[i] = nums[ind[1]]
             nums[ind[1]] = nums[ind[0]]
