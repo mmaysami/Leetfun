@@ -22,7 +22,7 @@ import heapq
 class Solution:
     def findKthLargest(self, nums: list, k: int) -> int:
         """
-        heapq is a binary heap, O(N) heapify, O(log n) push and O(log n) pop. See the heapq source code.
+        heapq is a binary heap, O(N) heapify, O(log N) push and O(log N) pop. See the heapq source code.
         https://stackoverflow.com/questions/38806202/whats-the-time-complexity-of-functions-in-heapq-library/38833175
         """
         # K-Restricted heapq
@@ -30,18 +30,19 @@ class Solution:
 
         if not nums or not (0 < k <= len(nums)): return -1
         q = nums[:k]
-        heapq.heapify(q)
+        heapq.heapify(q)    # O(Log K)
 
         for num in nums[k::]:
             # print('element {:2},  heap: {}'.format(num, q))
-            heapq.heappushpop(q, num)
+            heapq.heappushpop(q, num)   # Push new value, Pop smallest      O((N-K).Log K)
 
-        # Root = K-th Smallest Number 
+        # Root = K-th Largest Number
         return q[0]
 
     def findKthLargest_heap(self, nums: list, k: int) -> int:
         """
-        This is not a solution but a proxy to find array of K largest elements
+        A proxy to find array of K largest elements
+
         Time  Complexity O(N+K LogN)
         Space Complexity O(K)
 
@@ -111,23 +112,24 @@ if __name__ == "__main__":
     out = 13
 
     d1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
-    d2 = d1[::-1]
+    d2 = d1[::-1].copy()
     d3 = [3, 1, 9, 7, -2, 14, 9, 8, 7, 6]
     d4 = [-9, 1, 2, -4, 3, -2, -14, 0, 2, 3, 6]
 
-    k = 7
+    k = 4
     cases = [d1, d2, d3, d4]
 
     for d in cases:
-        kth_selection = sol.findKthLargest_selection(d, k)
-        kth_bubble = sol.findKthLargest_bubble(d, k)
-        kth_heap = sol.findKthLargest_heap(d, k)
-        kth_out = sol.findKthLargest(d, k)
-
         print("\nInput  : %s" % d)
         print("Expected : %s" % sorted(d)[-k])
         print('---')
-        print('Top K-SEL: %s' % kth_selection)
-        print('Top K-BBL: %s' % kth_bubble)
-        print('Top K-HIP: %s' % kth_heap)
+
+        kth_out = sol.findKthLargest(d, k)
+        kth_selection = sol.findKthLargest_selection(d, k)
+        kth_bubble = sol.findKthLargest_bubble(d, k)
+        kth_heap = sol.findKthLargest_heap(d, k)
         print('Top K-MHP: %s' % kth_out)
+        # print('Top K-SEL: %s' % kth_selection)
+        # print('Top K-BBL: %s' % kth_bubble)
+        # print('Top K-HIP: %s' % kth_heap)
+
