@@ -37,8 +37,7 @@ Leetcode Question Number
 461
 561
 617
-627
-654
+627     X
 654
 657
 669
@@ -51,9 +50,12 @@ Leetcode Question Number
 832
 883
 937
-957
+957     X
 
 
 FB
-283 https://leetcode.com/problems/move-zeroes/
-973 https://leetcode.com/problems/k-closest-points-to-origin
+680 Palindrome II       https://leetcode.com/problems/valid-palindrome-ii/
+215 Kth Largest Item    https://leetcode.com/problems/kth-largest-element-in-an-array/
+
+283 Move Zeroes         https://leetcode.com/problems/move-zeroes/
+973 K Closest Points    https://leetcode.com/problems/k-closest-points-to-origin
