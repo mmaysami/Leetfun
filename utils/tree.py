@@ -49,7 +49,7 @@ def insert_value(root, value):
     # If the tree is empty, return a new node
     if root is None:
         return TreeNode(value)
-    # Otherwise recur down the tree
+    # Otherwise, recur down the tree
     if value < root.value:
         root.left = insert_value(root.left, value)
     else:

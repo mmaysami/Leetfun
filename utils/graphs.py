@@ -70,7 +70,7 @@ class Graph:
         """
 
         if visited is None:
-            visited = [start]
+            visited = []
         elif start in visited:
             return
 
