@@ -34,10 +34,10 @@
 
 class Solution:
     """
-    #   Input:  [0,1,0,1,1,0,0,1], N = 7
-    #   Output: [0,0,1,1,0,0,0,0]
+    #   Input:  [0, 1, 0, 1, 1, 0, 0, 1], N = 7
+    #   Output: [0, 0, 1, 1, 0, 0, 0, 0]
     #       Day 0:  [0, 1, 0, 1, 1, 0, 0, 1]
-    #       Day 1:  [0, 1, 1, 0, 0, 0, 0, 0]    Cycle
+    #       Day 1:  [0, 1, 1, 0, 0, 0, 0, 0]    Cycle Start
     #       Day 2:  [0, 0, 0, 0, 1, 1, 1, 0]
     #       Day 3:  [0, 1, 1, 0, 0, 1, 0, 0]
     #       Day 4:  [0, 0, 0, 0, 0, 1, 0, 0]
@@ -51,29 +51,30 @@ class Solution:
     #       Day 12: [0, 0, 1, 0, 1, 1, 1, 0]
     #       Day 13: [0, 0, 1, 1, 0, 1, 0, 0]
     #       Day 14: [0, 0, 0, 0, 1, 1, 0, 0]
-    #       Day 15: [0, 1, 1, 0, 0, 0, 0, 0]    Cycle
+    #       Day 15: [0, 1, 1, 0, 0, 0, 0, 0]    Cycle Start
     """
-
-    # def prisonAfter1Day(self, cells: list) -> list:
-    #     return [0] + [1 if cells[i - 1] == cells[i + 1] else 0 for i in range(1, len(cells) - 1)] + [0]
 
     def prisonAfterNDays(self, cells: list, n: int) -> list:
         if n == 0:
             return cells
 
-        cycle_end = None
         status = cells
-        d = {str(status): 0}
+        dict_states = {str(status): 0}  # items = {states: Day}
+        cycle_end = None
 
+        # Loop over days until finding a cycle
         for m in range(1, n + 1):
+            # Switch States based on rules
             status = [0] + [1 if status[i - 1] == status[i + 1] else 0 for i in range(1, len(status) - 1)] + [0]
-            if not str(status) in d.keys():
-                d[str(status)] = m
+
+            if not str(status) in dict_states.keys():
+                dict_states[str(status)] = m
             else:
-                cycle_start, cycle_end = d[str(status)], m
+                cycle_start, cycle_end = dict_states[str(status)], m
                 break
 
         if cycle_end:
+            # Status = state at Cycle End
             for c in range((n - cycle_start) % (cycle_end - cycle_start)):
                 status = [0] + [1 if status[i - 1] == status[i + 1] else 0 for i in range(1, len(status) - 1)] + [0]
         return status

@@ -12,12 +12,11 @@
 """
 from collections import defaultdict, deque
 
-
-# ----------------------------------------------------------------------------
+# -------------------------------------------------------------------------------
 class Graph:
     """
     Directed Graph Class
-        Numeric Vertices
+        Alphanumerical Vertex Labels
     """
 
     def __init__(self):
@@ -36,7 +35,7 @@ class Graph:
         """
         self.graph[v1].append(v2)
 
-
+    # -------------------------------------------------------------------------------
     def bfs(self, start):
             """
             Print Breath First Search (Level Order)
@@ -44,7 +43,6 @@ class Graph:
             :param start:   Starting Vertex
             :return:
             """
-
             # Init Start Vertex and Report it
             visited = [start]
 
@@ -61,6 +59,7 @@ class Graph:
                         visited.append(v)
                         # print('\ns, v, q', s, v, list(que))
 
+    # -------------------------------------------------------------------------------
     def dfs(self, start, visited=[]):
         """
         Print Depth First Search

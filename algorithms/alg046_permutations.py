@@ -4,7 +4,6 @@
 # Given a collection of distinct integers, return all possible permutations.
 #
 # Examples:
-#
 #     Input: [1,2,3]
 #     Output:
 #     [
@@ -60,6 +59,7 @@ class Solution:
         return res
 
     def dfs(self, nums, path, res):
+        print('{:10},  {:15}, {}'.format(str(nums), str(path), str(res)))
         if not nums:
             res.append(path)
             # Back
@@ -75,4 +75,4 @@ if __name__ == "__main__":
     sol = Solution()
     lst = [1, 2, 3]
     print("List : ", lst)
-    print("Result : \n", sol.permute(lst))
+    print("Result : \n", sol.permute_dfs(lst))

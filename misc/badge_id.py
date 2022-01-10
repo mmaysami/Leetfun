@@ -92,6 +92,13 @@ def validate_id(first, last, code):
     return 'PASS'
 
 # ========================================================
+# Edge Cases:
+#   Names: A.J. C. (Short Name, Non Character)
+#   Hire Date > Now
+#   Hire Month not in (1,12)
+#   Hire Rank == 0 ?
+#   Verify Code
+
 # first = input('Enter your first name?')
 # last = input('Enter your last name?')
 # code = input('Enter your ID Code?')

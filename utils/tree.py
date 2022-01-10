@@ -11,10 +11,13 @@
 # -------------------------------------------------------------------------------
 """
 
-# ----------------------------------------------------------------------------
+
+# -------------------------------------------------------------------------------
 class TreeNode:
     """
     Binary Search Tree Class
+
+    Assumptions: Left Child < Value < Right Child
     """
 
     def __init__(self, val, left=None, right=None):
@@ -26,18 +29,33 @@ class TreeNode:
         return 'TreeNode({})'.format(self.value)
 
 
-# ----------------------------------------------------------------------------
+# -------------------------------------------------------------------------------
 def inorder(root):
     """
     Inorder traversal of BST from root node
     """
     if root is not None:
         inorder(root.left)
-        print (root.value, end=',')
+        print(root.value, end=',')
         inorder(root.right)
 
 
-# ----------------------------------------------------------------------------
+# # -------------------------------------------------------------------------------
+def min_value_node(root):
+    """
+    Return the node with min value found in that tree.
+
+    :param root: Root Node (Instance of TreeNode or None)
+    """
+    current = root
+
+    # loop down to the leftmost leaf
+    while (current.left is not None):
+        current = current.left
+    return current
+
+
+# -------------------------------------------------------------------------------
 def insert_value(root, value):
     """
     Insert a new node with given value in BST root
@@ -58,23 +76,7 @@ def insert_value(root, value):
     return root
 
 
-# ----------------------------------------------------------------------------
-def min_value_node(root):
-    """
-    Return the node with min value found in that tree.
-
-    :param root: Root Node (Instance of TreeNode or None)
-    """
-    current = root
-
-    # loop down to the leftmost leaf
-    while (current.left is not None):
-        current = current.left
-    return current
-
-
-# ----------------------------------------------------------------------------
-
+# -------------------------------------------------------------------------------
 def delete_node(root, value):
     """
     Delete the value and returns the new root
@@ -113,27 +115,21 @@ def delete_node(root, value):
 # ----------------------------------------------------------------------------
 def deserialize(string):
     """
-
     The input string  [1,null,2,3] represents the serialized format of a binary tree
     using level order traversal, where null signifies a path terminator where no node exists below.
 
     :param string: String of a list of tree nodes/nulls '[1,2,3,null,null,4,null,null,5]'
 
     Example:
-        []
-        Empty Tree
-
-        [1,2,3]
-            1
-           / \
-          2  3
-
-        [1, null, 2,3]
-            1
-             \
-             2
-            /
-           3
+        []                      Empty Tree
+        [1,2,3]                     1
+                                   / \
+                                  2  3
+        [1, null, 2,3]              1
+                                     \
+                                     2
+                                    /
+                                   3
     """
 
     if string == '{}':
