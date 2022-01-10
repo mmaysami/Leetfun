@@ -1,56 +1,55 @@
-Leetcode Question Number
-1
-2
-5
-8
-10
-20
-21
-25
-46
-48
-54
-75
-88
+Practice Leetcode Question Subset (AK):
+    1   E   ✓
+    2   M   ✓
+    5   M   ✓
+    8   M   ✓
+    10  H   ✓
+    20  E   ✓
+    21  E   ✓
+    25  H   ✓
+    46  M   ✓
+    48  M   ✓
+    54  M   ✓
+    75  M   ✓
+    88  E   ✓
 
-98
-103
-133
-138
-146
-165
-168
-174
-176
-177
-178
-185
-200
-206
-206
-226
-253
-287
-295
-297
-445
-461
-561
-617
-627     X
-654
-657
-669
-728
-763
-797
-804
-814
-819
-832
-883
-937
-957     X
+    98
+    103
+    133
+    138
+    146
+    165
+    168
+    174
+    176
+    177
+    178
+    185
+    200
+    206
+    226
+    253
+    287
+    295
+    297
+    445 M   ✓
+    461
+    561
+    617
+    627
+    654
+    657
+    669
+    728
+    763
+    797
+    804 E   ✓
+    814
+    819
+    832 E
+    883 E   ✓
+    937 E   ✓
+    957 M   ✓
 
 
 FB
@@ -59,3 +58,8 @@ FB
 
 283 Move Zeroes         https://leetcode.com/problems/move-zeroes/
 973 K Closest Points    https://leetcode.com/problems/k-closest-points-to-origin
+
+Amazon
+490,... Maze            https://leetcode.com/problems/the-maze/
+Github Book Solutions:
+    https://cheonhyangzhang.gitbooks.io/leetcode-solutions/content/solutions-501-550/505-the-maze-ii.html

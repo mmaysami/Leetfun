@@ -21,12 +21,12 @@ use testdb;
 --    friendid int not null
 --)
 
---insert into likes VALUES
+--insert_value into likes VALUES
 -- (1, 101), (1, 201),
 -- (2, 201), (2, 301),
 -- (3, 301), (3, 401);
 
---insert into friends VALUES
+--insert_value into friends VALUES
 -- (1, 2), (1, 4), (1, 5),
 -- (2, 4), (2, 3),
 -- (3, 5), (3, 6);

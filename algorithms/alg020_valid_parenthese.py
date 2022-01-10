@@ -1,4 +1,4 @@
-# 20. Valid Parenthesis
+# 20. Valid Parenthesis (Easy)
 # https://leetcode.com/problems/valid-parentheses/
 #
 # Given an input string (s) and a pattern (p), implement regular expression matching

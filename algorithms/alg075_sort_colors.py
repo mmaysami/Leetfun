@@ -1,4 +1,4 @@
-# 75. Sort Colors
+# 75. Sort Colors (Medium)
 # https://leetcode.com/problems/sort-colors/
 
 # Given an array with n objects color red, white, or blue, sort them in-place so that objects of the same color are adjacent,

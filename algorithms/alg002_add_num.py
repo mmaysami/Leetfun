@@ -1,4 +1,4 @@
-# 2. Add Two Numbers (Linked Lists)
+# 2. Add Two Numbers (Linked Lists)  (Medium)
 # https://leetcode.com/problems/add-two-numbers/
 
 # Problem:

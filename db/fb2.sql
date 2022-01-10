@@ -9,23 +9,23 @@ use testdb;
 --parent_id integer
 --)
 
---insert into subs values(1,null);
---insert into subs values(2,null);
---insert into subs values(3,null);
---insert into subs values(4,null);
+--insert_value into subs values(1,null);
+--insert_value into subs values(2,null);
+--insert_value into subs values(3,null);
+--insert_value into subs values(4,null);
 --commit;
 
---insert into subs values(5,1);
---insert into subs values(6,1);
---insert into subs values(7,1);
---insert into subs values(8,1);
+--insert_value into subs values(5,1);
+--insert_value into subs values(6,1);
+--insert_value into subs values(7,1);
+--insert_value into subs values(8,1);
 
---insert into subs values(9,2);
---insert into subs values(10,2);
---insert into subs values(11,3);
---insert into subs values(12,3);
+--insert_value into subs values(9,2);
+--insert_value into subs values(10,2);
+--insert_value into subs values(11,3);
+--insert_value into subs values(12,3);
 
---insert into subs values(12,4);
+--insert_value into subs values(12,4);
 --commit;
 
 -- All Entries

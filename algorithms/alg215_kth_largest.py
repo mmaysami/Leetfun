@@ -1,4 +1,4 @@
-# 215. Kth Largest Element in an array [FB]
+# 215. Kth Largest Element in an array [FB] (Medium)
 # https://leetcode.com/problems/kth-largest-element-in-an-array/
 #
 # Given an integer array nums and an integer k, return the kth largest element in the array.

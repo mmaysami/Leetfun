@@ -1,4 +1,4 @@
-# 6. Zig Zag Conversation
+# 6. Zig Zag Conversation (Medium)
 # https://leetcode.com/problems/zigzag-conversion/
 
 # Problem:

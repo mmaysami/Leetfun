@@ -1,4 +1,4 @@
-# 25. Reverse Nodes in K-Group
+# 25. Reverse Nodes in K-Group (Hard)
 # https://leetcode.com/problems/reverse-nodes-in-k-group/
 #
 # Given a linked list, reverse the nodes of a linked list k
