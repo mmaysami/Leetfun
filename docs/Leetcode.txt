@@ -44,9 +44,9 @@ Practice Leetcode Question Subset (AK):
     763
     797
     804 E   ✓
-    814
-    819
-    832 E
+    814 M
+    819 E   ✓
+    832 E   ✓
     883 E   ✓
     937 E   ✓
     957 M   ✓
