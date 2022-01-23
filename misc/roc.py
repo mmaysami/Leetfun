@@ -1,6 +1,6 @@
 """
 Calculate/Plot ROC given
-    Model output probablities
+    Model output probabilities
     True Values
 """
 from matplotlib import pyplot as plt
