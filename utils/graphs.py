@@ -46,6 +46,7 @@ class Graph:
             # Init Start Vertex and Report it
             visited = [start]
 
+            # Init. Queue and Loop
             que = deque()
             que.append(start)
 
@@ -68,13 +69,15 @@ class Graph:
         :return:
         """
 
+        # Init Start Vertex and Report it
         if visited is None:
             visited = []
         elif start in visited:
             return
 
-        # Init Start Vertex and Report it
         visited.append(start)
+
+        # Init. Queue and Loop
         que = deque()
         que.append(start)
 
