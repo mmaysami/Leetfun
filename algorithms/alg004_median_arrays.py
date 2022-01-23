@@ -1,23 +1,21 @@
 # 4. Median of Two Sorted Arrays (Hard)
 # https://leetcode.com/problems/median-of-two-sorted-arrays/
-
+#
 # Problem:
 #   There are two sorted arrays nums1 and nums2 of size m and n respectively.
 #   Find the median of the two sorted arrays. The overall run time complexity should be O(log (m+n)).
 #   You may assume nums1 and nums2 cannot be both empty.
-
+#
 # Example:
-# nums1 = [4, 20, 32, 50, 55, 61]
-# nums2 = [1, 12, 22, 30, 70]
-# median = 30
-
-# nums1 = [16, 20, 23, 50, 54, 60]
-# nums2 = [65, 72, 72, 80, 85, 93]
-# median = 62.5
-
+#   nums1 = [4, 20, 32, 50, 55, 61]
+#   nums2 = [1, 12, 22, 30, 70]
+#   median = 30
+#
+#   nums1 = [16, 20, 23, 50, 54, 60]
+#   nums2 = [65, 72, 72, 80, 85, 93]
+#   median = 62.5
 
 import typing
-
 
 class Solution:
 
@@ -36,7 +34,7 @@ class Solution:
         half_len = (m + n) // 2 + 1
 
         while nums1 and nums2 and len(half_union) <= half_len:
-            # Append smallest elements until filling to median of half_union
+            # Append smallest element until filling to median of half_union
             half_union.append(nums1.pop(0) if nums1[0] < nums2[0] else nums2.pop(0))
 
         print(half_union)

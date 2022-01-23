@@ -1,6 +1,6 @@
 # 2. Add Two Numbers (Linked Lists)  (Medium)
 # https://leetcode.com/problems/add-two-numbers/
-
+#
 # Problem:
 #   two non-empty linked lists representing two non-negative integers
 #   Input: (2 -> 4 -> 3) + (5 -> 6 -> 4)
@@ -57,12 +57,12 @@ class Solution:
         co = val // 10
         r = ListNode(val % 10)
 
-        if (l1.next != None or l2.next != None or c != 0):
+        if (l1.next != None or l2.next != None or co != 0):
             if l1.next == None:
                 l1.next = ListNode(0)
             if l2.next == None:
                 l2.next = ListNode(0)
-            r.next = self.addTwoNumbers(l1.next, l2.next, c)
+            r.next = self.addTwoNumbers(l1.next, l2.next, co)
         return r
 
 

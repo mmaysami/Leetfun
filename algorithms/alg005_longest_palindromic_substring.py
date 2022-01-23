@@ -1,9 +1,10 @@
 # 5. Longest Palindromic Substring (Medium)
 # https://leetcode.com/problems/longest-palindromic-substring/
-
+#
 # Problem:
 #   Given a string s, find the longest palindromic substring in s. You may assume that the maximum length of s is 1000.
-
+#   A string is a palindrome when it reads the same backward as forward.
+#
 # Example:
 #   Input: "babad"
 #   Output: "bab", "aba" is also a valid answer.

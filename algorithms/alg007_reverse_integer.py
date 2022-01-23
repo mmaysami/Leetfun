@@ -7,10 +7,7 @@
 # For the purpose of this problem, assume that your function returns 0
 # when the reversed integer overflows.
 #
-# https://leetcode.com/problems/reverse-integer/
-#
 # Examples:
-#
 #     Input: 123
 #     Output: 321
 #
